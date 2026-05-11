@@ -1,4 +1,4 @@
-{% set version = '0.1.3' %}
+{% set version = "0.1.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/polite_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/polite/polite_{{ version }}.tar.gz
-  sha256: d2f7c256e886e1d541d67bfdc1429861aa8b94eb2f106d717d13b41f6ac51f4c
+  sha256: 0d54bbc0dbe747f437eb5b6ed004ba5fe4c8d344a5d679f7d16159d14dc2e0ee
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -49,8 +49,7 @@ test:
 about:
   home: https://github.com/dmi3kno/polite, https://dmi3kno.github.io/polite/
   license: MIT
-  summary: 'Be responsible when scraping data from websites by following polite principles: introduce
-    yourself, ask for permission, take slowly and never ask twice.'
+  summary: 'Be responsible when scraping data from websites by following polite principles: introduce yourself, ask for permission, take slowly and never ask twice.'
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
